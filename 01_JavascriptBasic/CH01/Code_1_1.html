@@ -1,0 +1,23 @@
+<html>
+
+<body>
+
+    <label for="nick">nickname</label>
+    <input type="text" id="nick" />
+
+    <script>
+        // 요소를 선택
+        var nick = document.getElementById('nick');
+
+        // 입력란에 문자를 표시
+        nick.value = '별명을 입력하세요';
+
+        nick.onfocus = function(){
+            this.style.background = "orange";
+            this.value = '';
+        }
+    </script>
+
+</body>
+
+</html>
