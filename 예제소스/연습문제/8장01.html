@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8장 연습문제1 - 나이 계산</title>
+</head>
+<body>
+	<h1>나이 계산기</h1>
+	<label for="age">출생한 연도를 입력하세요</label><br><br>
+	<input type="text" id="age" name="age">
+	<input type="button" value="확인" onclick="age()">
+
+<script>
+
+	function age(){
+		var	age = document.querySelector('#age').value;
+		console.log(age);
+		var current_date = new Date(),
+		    current_year = current_date.getFullYear(),
+		    birth_date = new Date(age),
+		    birth_year = birth_date.getFullYear();
+
+		alert('당신의 나이는 ' + (current_year - birth_year));
+	}
+
+</script>	
+</body>
+</html>

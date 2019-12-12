@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery each()</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<ul>
+	  <li>first</li>
+	  <li>second</li>
+	  <li>third</li>
+	  <li>fourth</li>
+	</ul>
+
+
+<script>
+
+	var $li = $('li'),			// 엘리먼트 선택
+	    length = $li.length,	// 엘리먼트 길이
+	    size = 12;
+
+	// jQuery each()
+	console.time('jQuery');
+	$li.each(function(i){
+	  $(this).css('fontSize', size + 'px');
+	  size += 10;  
+	});	
+	console.timeEnd('jQuery');
+
+</script>
+
+</body>
+
+</html>

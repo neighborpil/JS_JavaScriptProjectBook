@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>12시간제 표시</title>
+  <style>
+    #myTime{
+      width: 200px;
+      font-size: 2em;
+      padding: 10px;
+      text-align: center;
+      background: #666;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div id="myTime">
+  
+</div>
+
+<script>
+  var myTime = document.getElementById('myTime');
+  var d = new Date(),
+      h = d.getHours(),
+      m = d.getMinutes(),
+      s = d.getSeconds();
+ 
+  // 24시간제 -> 12시간제 변경
+  var h12 = (h > 12) ? (h - 12) : h; 
+  // 12시간제 - 오전 오후 판정
+  var ampm = (h < 12) ? "오전" : "오후"; 
+
+  // 분 2자릿수 표시
+  var min_o = (m < 10) ? "0" : "";
+
+  // 초 2자릿수 표시
+  var sec_o = (s < 10) ? "0" : "";
+
+  var time = ampm + " " + h12 + ":" + min_o + m + ":" + sec_o + s;
+  // document.write(time);
+  myTime.innerHTML = time;
+	
+</script>	
+</body>
+</html>

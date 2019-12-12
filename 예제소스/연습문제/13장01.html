@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13장-연습문제1</title>
+</head>
+<body>
+	<p id="output"></p>	
+
+<script>
+	var movies = {
+	  "title" : "앤트맨",
+	  "year" : "2015",
+	  "genres" : "액션",
+	  "score" : 7.8
+	}
+	var output = document.querySelector("#output");
+
+	for( var key in movies){
+	  output.innerHTML += key + ": " + movies[key] + " ";
+	  console.log(key);
+	  if( key !== "score") output.innerHTML += "<br>";
+	  if( key === "score"){
+	    for( var i = 0; i <  Math.round(movies[key]); i++)
+	      {
+	        output.innerHTML += "*";
+	      }
+	  }
+	}	
+</script>
+</body>
+</html>

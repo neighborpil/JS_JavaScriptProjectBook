@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>switch문</title>
+</head>
+<body>
+	<h2>문제: 다음 중 웹 표준 언어가 아닌 것은?</h2>
+	<ol>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Java</li>
+		<li>JavaScript</li>
+	</ol>
+
+	<script>
+		var answer = 3;	// 답을 입력
+
+		switch(answer){ 
+		  case 1: 
+		    msg='틀렸습니다'; 
+		    break;
+		  case 2: 
+		    msg='틀렸습니다'; 
+		    break;
+		  case 3: 
+		    msg='정답입니다'; 
+		    break;
+		  case 4: 
+		    msg='틀렸습니다'; 
+		    break;    
+		  default:
+		    // 기타
+		    break;        
+		}
+		document.write(msg);	// 정답입니다
+	</script>
+</body>
+</html>

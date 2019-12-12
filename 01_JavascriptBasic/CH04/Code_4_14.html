@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- 이벤트 바인딩 -->
+<body>
+    <button id="btn" style="padding: 10px;">Click</button>
+
+    <script>
+    var btn = document.getElementById('btn');
+
+    // 함수 정의
+    function setColor(){
+        this.style.backgroundColor = '#333';
+        this.style.color = 'orange';
+    }
+
+    // 이벤트 리스너 연결
+    btn.addEventListener('click', setColor); // 함수내 코드가 길어지면 가독성이 떨어지므로 외부에 작성하는 것이 좋음
+    </script>
+</body>
+</html>

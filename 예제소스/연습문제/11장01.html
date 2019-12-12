@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact us</title>
+	<style>
+		#map{ width: 500px; height: 500px; }
+	</style>
+</head>
+<body>
+	
+	<div id="map"><br>&nbsp;지도가 표시될 영역</div>
+
+    <script>
+
+    function initMap() {
+        // 맵 객체를 생성하고 id=‘map’ 에 지도 표시
+        var map = new google.maps.Map(document.getElementById('map'), {
+        	center: {lat: 37.579137, lng: 126.980388},
+        	scrollwheel: false,
+        	zoom: 17
+        });
+
+        // 마커 객체 생성
+        var marker = new google.maps.Marker({
+        	map: map,
+        	// 국립현대미술관 37.579537, 126.980388
+        	position: {lat: 37.579537, lng: 126.980388},
+        	title: '국립현대미술관'
+        });
+
+        var marker2 = new google.maps.Marker({
+        	map: map,
+        	// 아프리카 미술관 37.578014, 126.979913
+        	position: {lat: 37.578014, lng:  126.979913},
+        	title: '아프리카 미술관'
+        });
+
+    }	// end initMap();
+
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA79F3HwKaIZZGfFmXbW6esaI6fqbxti0I&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

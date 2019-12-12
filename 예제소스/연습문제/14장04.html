@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>14장: 연습문제 4</title>
+	<style>
+		button{ padding: 5px 10px; }
+	</style>
+</head>
+
+<body>
+<button id="get_info">몬스터 정보</button><br>
+
+<script>
+	var pokemon = {
+		'name' : '꼬부기',
+		'weight' : '14kg',
+		'cp': 10,
+	}
+	var val = JSON.stringify(pokemon);
+
+	localStorage.setItem('monster', val);
+
+	get_info.addEventListener('click', function(){
+		var monster = JSON.parse(localStorage.getItem('monster'));
+		var get_info = document.querySelector('#get_info');		
+
+		document.body.innerHTML += 
+			Object.getOwnPropertyNames(monster)[0] + ': ' + monster.name + '<br>';
+		document.body.innerHTML += 
+			Object.getOwnPropertyNames(monster)[1] + ': ' + monster.weight + '<br>';
+		document.body.innerHTML += 
+			Object.getOwnPropertyNames(monster)[2] + ': ' + monster.cp + '<br>';
+	});
+</script>	
+</body>
+
+</html>

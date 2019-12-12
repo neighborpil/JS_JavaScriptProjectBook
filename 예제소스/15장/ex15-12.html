@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ex15-12</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+	</style>
+</head>
+<body>
+	<ul>
+	  <li>Home</li>
+	  <li>Portfolio</li>
+	  <li>About</li>
+	  <li class="select">Contact</li>
+	</ul>
+
+<script>
+
+	$(function(){
+	  // ul 요소 안의 뒤에 추가
+	  $('ul')
+	  		.append('<li>append</li>')
+	  		.children('li').last().css('border', '3px solid');
+
+	  // ul 요소 안의 앞에 추가
+	  $('ul')
+	  		.prepend('<li>prepend</li>')
+	  		.children('li').first().css('border', '3px solid');
+	});	
+
+
+</script>	
+</body>
+</html>

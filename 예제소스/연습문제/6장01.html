@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6장 연습문제1</title>	
+</head>
+<body>
+
+	<form name="frm">
+	  <p>다음 빈 칸에 올바른 값을 입력하세요</p>
+	  <input type="text" name="a1" size="3" value="9" /> +
+	  <input type="text" name="a2" size="3" value="3" /> =
+	  <input type="text" name="answer" size="3" />
+	  <br /><br />
+	  <input type="button" onclick="result()" value="확인" />
+	</form>
+
+	<script>
+
+		function result(){
+
+			//	form 객체 지정
+			var frm = document.frm;
+
+			//	입력된 값을 변수에 대입
+			var a1 = Number(frm.a1.value),
+				a2 = Number(frm.a2.value),
+				answer = frm.answer.value;  
+
+			//	정답	
+			var true_answer = a1 + a2;
+			
+			// 정답 판정
+			if(true_answer == answer){
+				alert('정답입니다!');
+			} else{
+				alert('틀렸습니다');
+			}
+		}	// end result()
+
+	</script>
+</body>
+</html>

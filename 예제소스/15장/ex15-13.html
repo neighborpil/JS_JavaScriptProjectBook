@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ex15-13</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		*{ margin: 0; }
+		body{ padding: 50px; }
+		button{ padding: 5px 10px; }
+	</style>
+</head>
+<body>
+	<figure>
+		<img src="http://placehold.it/200x150/f90?text=1">
+		<img src="http://placehold.it/200x150/ff0?text=2">
+		<img src="http://placehold.it/200x150/f0f?text=3">
+		<img src="http://placehold.it/200x150/09f?text=4">
+	</figure>
+	<button onclick="img_move()">appendTo</button>
+
+	<script>
+		function img_move(){
+		  // 첫번째 이미지를 마지막으로 이동
+		  $('img').first().appendTo('figure');		
+		}	
+	</script>	
+</body>
+</html>

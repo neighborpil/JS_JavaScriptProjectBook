@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ex15-17</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+	<button id="btn" style="padding: 10px;">click</button>
+<script>
+	$(function(){
+	  // 2개의 이벤트를 동시에 연결
+	  $('#btn').on('mouseenter mouseleave', function(e){
+	    // 이벤트 타입을 검사
+	    if(e.type == 'mouseenter'){
+	      $(this).css('border-radius', '10px');
+	    }
+	    if(e.type == 'mouseleave'){
+	      $(this).css('border-radius', '0px');
+	    }    
+	  });
+	});
+</script>	
+</body>
+</html>

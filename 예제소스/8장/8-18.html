@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-18</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<ul>
+	  <li>first</li>
+	  <li>second</li>
+	  <li>third</li>
+	  <li>fourth</li>
+	</ul>
+
+<script>
+	var $li = $('li'),			// 엘리먼트 선택
+	    length = $li.length,	// 엘리먼트 길이
+	    size = 12;
+
+	console.time('JavaScritp');
+	// li 요소의 개수만큼 반복
+	for(var i = 0; i < length; i++){
+	  $('li').eq(i).css('fontSize', size + 'px');
+	  size += 10;
+	}	
+	console.timeEnd('JavaScritp');
+</script>
+
+
+</body>
+
+</html>

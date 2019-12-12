@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>이벤트 핸들러</title>
+	<style>
+		#box{
+			position: relative;
+			width: 200px; height: 200px;
+			border: 3px solid black;
+		}
+	</style>
+<body>
+	<h1>터치 이벤트</h1>
+	<div id="box">
+		<p>나를 터치해 주세요</p>
+	</div>
+
+	<script>
+		var box = document.getElementById('box');
+
+		// 터치 제어를 위한 객체 선언
+		var touch = {
+			start: function(){
+				box.innerHTML = '나를 건드렸군요!';
+				this.style.background = "red";
+			},
+			end: function(){
+				box.innerHTML = '손을 떼었군요!';
+				this.style.background = '';
+			},
+			move: function(e){
+				box.innerHTML = '만지는 중입니다';
+				this.style.background = 'yellow';
+			}
+		} // 객체 끝
+
+		// 터치 이벤트 리스너 추가
+		box.addEventListener('touchstart', touch.start);
+		box.addEventListener('touchend', touch.end);
+		box.addEventListener('touchmove', touch.move);
+	</script>
+</body>
+
+</html>

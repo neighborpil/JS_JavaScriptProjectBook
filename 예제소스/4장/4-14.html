@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>이벤트 바인딩</title>
+<body>
+	<button id="btn" style="padding:10px;">Click</button>
+
+	<script>
+		var btn = document.getElementById('btn');
+
+		// 함수 정의
+		function setColor(){
+			this.style.backgroundColor = '#333';
+			this.style.color = 'orange';
+		}
+
+		// 이벤트 리스너 연결
+		btn.addEventListener('click', setColor);
+	</script>
+</body>
+
+</html>

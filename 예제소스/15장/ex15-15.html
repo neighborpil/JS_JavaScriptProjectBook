@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ex15-15</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		button{ 
+		  padding: 10px 10px;
+		  margin-right: 10px;
+		  font-size: 2em;
+		  outline: none;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn1">click</button>
+	<button id="btn2">hover</button>
+
+	<script>
+		// click 이벤트
+		$('#btn1').click(function(){
+		  $(this).css('border-radius', '10px');
+		});
+
+		// hover 이벤트
+		$('#btn2').hover(
+		  // mouseenter
+		  function(){
+		    $(this).css('box-shadow', '3px 3px 3px #666');
+		  },
+		  // mouseleave
+		  function(){
+		    $(this).css('box-shadow', '0px 0px 0px #666');  
+		  }
+		);
+	</script>	
+</body>
+</html>

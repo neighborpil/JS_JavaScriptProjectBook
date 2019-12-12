@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+	<style>
+/*		table{width: 400px;}
+		table,th,td{border:1px solid;border-collapse: collapse;}		
+		th,td{padding: 10px;}*/
+	</style>
+</head>
+<body>
+	<table border="1" cellpadding="10" cellspacing="0">
+	  <caption>인기도서</caption>
+	  <tr>
+	  	<th>제목</th><th>도서명</th><th>가격</th>
+	  </tr>
+	</table>
+
+	<script>
+		var book =[
+	      {
+	        "title": "채식주의자",
+	        "author": "한강",
+	        "price": "12000"
+	      },
+	      {
+	        "title": "종의 기원",
+	        "author": "정유정",
+	        "price": "10000"
+	      },
+	      {
+	        "title": "다르게 보는 힘",
+	        "author": "이종인",
+	        "price": "12600"
+	      }
+		];
+
+		$(book).each(function(i, obj){
+		  var title = obj.title;
+		  var author = obj.author;
+		  var price = obj.price;
+		  var txt = '<td>' + title + '</td>'
+		  				+ '<td>' + author + '</td>'
+		  				+ '<td>' + price + '</td>';
+
+		  $('table').append('<tr>');
+		  $('table tr:last').html(txt);
+		});
+
+	</script>
+
+</body>
+</html>

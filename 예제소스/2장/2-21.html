@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>배열 값을 탐색</title>
+</head>
+<body>
+
+<script>
+
+	// 배열 선언
+	var customer_name = [
+		'Michael Kwon', 
+		'Steve Jobs', 
+		'John Denver', 
+		'Pokemon'
+	];
+	var length = customer_name.length;
+
+	var search_name = prompt('이름 조회', '조회할 이름을 입력하세요');
+
+	// 배열 안의 이름을 확인
+	for(var i = 0; i < length; i++){
+		if(search_name == customer_name[i]){
+			alert(search_name + '을 찾았습니다.');
+			break;
+		} else if(i == length-1){
+			alert('해당하는 이름이 없습니다.');
+		}
+	}
+
+</script>
+
+</body>
+</html>

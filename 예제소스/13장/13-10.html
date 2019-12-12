@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>프로토타입으로 메소드 생성 | 객체 리터럴로 표현</title>
+</head>
+<body>
+	
+<script>
+
+	// 생성자 함수
+	function Character(name, job){
+		this.name = name;
+		this.job = job;
+	}
+
+	// 프로토타입으로 메소드 생성(객체 리터럴)
+	Character.prototype = {
+		move: function(){
+				document.write(this.name + ' ' + this.job + ' 캐릭터 이동<br>');
+		},
+		attack: function(){
+				document.write(this.name + ' ' + this.job + '(이)가 공격<br>');
+		},
+		escape: function(){
+				document.write(this.name + ' ' + this.job + '(이)가 도망<br>');
+		},		
+		dead: function(){
+				document.write(this.name + ' ' + this.job + '(이)가 죽었습니다.<br>');
+		}	
+	}
+
+	// 새로운 객체 인스턴스 생성
+	var char1 = new Character('루이스', '기사');
+	var char2 = new Character('플레네', '마법사');
+
+	// 메소드 실행
+	char1.move();
+	char1.attack();
+	char2.escape();
+	char1.dead();
+	
+
+</script>
+
+</body>
+</html>

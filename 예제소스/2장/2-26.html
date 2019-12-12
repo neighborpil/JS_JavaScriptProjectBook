@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>배열 메소드</title>
+</head>
+<body>
+
+<script>
+
+	var korea = ['서울', '부산', '광주'];
+
+	// shift()
+	var shift_korea = korea.shift();
+	document.write(shift_korea + '<br>');	// 서울
+	document.write(korea + '<br>');	// 부산, 광주
+
+	// unshift()
+	korea.unshift('제주도');
+	document.write(korea + '<br>');	// 제주도,부산,광주
+
+</script>
+
+</body>
+</html>

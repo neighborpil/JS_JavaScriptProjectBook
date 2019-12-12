@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>연습문제1</title>
+<style>
+	a{ text-decoration: none;}
+	header{ 
+	  height: 80px;
+	  background: #ccc;
+	  overflow: hidden;
+	}
+	header > h1{ 
+	  float: left;
+	  margin: 10px 0 0 0;
+	  margin-left: 20px;
+	}
+	header > #toggle{ 
+	  float: right;
+	  margin: 20px 20px 0 0;
+	}
+	header #toggle{
+	  display: block;
+	  padding: 5px 10px;
+	  background: #333;
+	  color: #fff;
+	}
+	nav#gnb.active{
+	  display: block;
+	  clear: both;
+	}
+	nav#gnb{
+	  display: none;
+	  clear: both;
+	}
+	nav > div{
+	  padding: 5px 0;
+	}	
+</style>	
+</head>
+
+<body>
+	<header>
+	  <h1>app title</h1>
+	  <a href="#" id="toggle">toggle</a>
+	</header>
+	<nav class="active" id="gnb">
+	  <div><a href="#">Home</a></div>
+	  <div><a href="#">Portfolio</a></div>
+	  <div><a href="#">Conctact</a></div>
+	</nav>	
+
+<script>
+
+	var toggle = document.getElementById('toggle');
+	var nav = document.getElementById('gnb');
+
+	toggle.addEventListener('click', function(){
+	  var attr = nav.getAttribute('class');
+	  console.log(attr);
+	  if(attr){
+	    nav.removeAttribute('class');
+	  } else{
+	    nav.setAttribute('class', 'active');
+	  }
+	});
+	
+</script>	
+
+</body>
+</html>

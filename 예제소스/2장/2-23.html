@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>배열 메소드</title>
+</head>
+<body>
+
+<script>
+
+	var score = [90, 55, 80, 60, 100];
+	var customer_name = [
+		'Michael Kwon', 
+		'Steve Jobs', 
+		'John Denver', 
+		'Pokemon'
+	];
+
+	// 배열을 이름순으로 정렬
+	document.write(customer_name.sort() + '<br>');
+
+	// 번호 순으로 정렬
+	document.write(score.sort(function(a, b){ return a - b;}) + '<br>');
+
+	// 높은 번호 순으로 정렬
+	document.write(score.sort(function(a, b){ return b - a;}) + '<br>');
+
+</script>
+
+</body>
+</html>

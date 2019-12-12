@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>이미지 교체 예제</title>
+</head>
+<body>
+	<img src="http://placehold.it/200x100/abc?text=img1" alt="" name="img1" />
+	<img src="http://placehold.it/200x100/cba?text=img2" alt="" name="img2" />
+	<img src="http://placehold.it/200x100/bac?text=img3" alt="" name="img3" />
+	<div>
+	  <button onclick="changeImg()">change image</button>
+	</div>	
+
+<script>
+	function changeImg(){
+	  var img1 = document.img1,
+	      img3 = document.img3,
+	      src1 = img1.getAttribute('src'),
+	      src3 = img3.getAttribute('src');
+	  
+	  console.log(src1, " ", src3);
+	  img1.src = src3;
+	  img3.src = src1;
+
+	}	
+</script>	
+</body>
+</html>

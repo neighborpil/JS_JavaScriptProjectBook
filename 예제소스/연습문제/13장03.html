@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13장 연습문제3</title>
+</head>
+<body>
+
+<script>
+
+	function Car(name, color, year){
+		this.name = name;
+		this.color = color;
+		this.year = year;
+	}
+
+	Car.prototype = {
+		start: function() {
+	    	document.write(this.name + ' 출발<br>');
+		},
+		stop: function() {
+	    	document.write(this.name + ' 정지<br>');			
+		}
+	};
+
+	var car1 = new Car('matiz', 'red', '2016');
+	car1.start();
+	car1.stop();
+
+</script>
+
+</body>
+</html>

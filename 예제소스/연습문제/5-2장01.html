@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5-2장 연습문제1</title>
+</head>
+<body>
+
+	<ul id="list">
+	  <li>1</li>
+	  <li>2</li>
+	  <li>3</li>
+	  <li>4</li>
+	</ul>
+
+<script>
+
+	var ul = document.getElementById('list');
+	var li = ul.getElementsByTagName('li');
+	var first_txt = li[0].innerHTML;	
+	var last_txt = li[li.length-1].innerHTML;
+
+	li[0].innerHTML = last_txt;
+	li[li.length-1].innerHTML = first_txt;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+</head>
+<body>
+
+<script>
+
+	let obj = {
+	  num : 5,
+	  add1 : function(a){
+	    console.log(this.num + a, this);
+	  },
+	  add2 : (a) => {
+	    console.log(this.num + a, this);
+	  }
+	}
+
+	obj.add1(3);	// 8, Object
+	obj.add2(3);	// NaN, Window
+
+</script>
+
+</body>
+</html>

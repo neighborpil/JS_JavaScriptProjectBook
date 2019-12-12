@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+</head>
+
+<body>
+
+	<div id="content"></div>
+
+	<script>
+		var content = document.querySelector('#content');
+
+		// text 삽입
+		content.innerText = "<h1>new Text!!</h1>";
+
+		// HTML 삽입
+		content.innerHTML += "<h1>new Text!!</h1>";
+ 	</script>
+
+</body>
+
+</html>

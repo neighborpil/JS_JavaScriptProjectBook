@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ex15-16</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		*{ margin: 0; }
+		body{ padding: 100px; }
+	</style>
+</head>
+<body>
+	<h3>그래프를 클릭</h3>
+	<progress min=0 max=100 value=0></progress>
+	<span id="info"></span>
+<script>
+	$(function(){
+		var val = 0;
+
+		// 클릭시 그래프가 증가
+		$('progress').on('click', function(){
+			$(this).val(val);
+			$('#info').html(val);
+			if(val < 100){ val += 10; }
+		});
+	});
+</script>	
+</body>
+</html>
