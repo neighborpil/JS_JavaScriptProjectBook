@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link type="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Light box</h1>
+        <img class="thumb" src="images/img01.jpg" width="100" />
+        <img class="thumb" src="images/img02.jpg" width="100" />
+        <img class="thumb" src="images/img03.jpg" width="100" />
+    </header>
+
+    <div id="block"></div>
+
+    <div id="lightbox">
+        <h1>박물관에서 어쩌고</h1>
+        <p>어님ㄴ어림낭럼니;ㅏ런미;ㅏ럼ㄴ다럼니ㅏ런미;ㅏ런ㅁㄷ라ㅣㅓㄴㅁㄷ라ㅓㄴㅁ다ㅓㄴㅁ다ㅣㅓㄴㅁㄷ라ㅣ;ㅓㄴㅁㄷ;라ㅣㅓㄴㅁ<br><br></p>
+        <figure>
+            <img src="images/img01.jpg" class="active" alt="" />
+            <img src="images/img02.jpg" />
+            <img src="images/img03.jpg" />
+        </figure>
+
+        <div class="indicator">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+        </div>
+        <div class="btn-close">X</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
