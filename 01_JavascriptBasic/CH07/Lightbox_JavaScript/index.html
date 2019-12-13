@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>lgiht box</h1>
+        <img class="thumb" src="images/img01.jpg" width="100" onclick="lightbox_open(1)" />
+        <img class="thumb" src="images/img02.jpg" width="100" onclick="lightbox_open(2)" />
+        <img class="thumb" src="images/img03.jpg" width="100" onclick="lightbox_open(3)" />
+    </header>
+
+    <!-- 라이트 박스 배경 -->
+    <div id="block"></div>
+
+    <div id="lightbox">
+        <h1>박물관에서 사라진 아빠를 찾아서</h1>
+        <p>어쩌고 저쩌고..ㅁㄴㅇㄹㄴㅁㅇㄻㅇㄴㄻㅇㄴㄻㄴㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄻㄴㅇㄻㄴㄹㅇㅁㅇㄴㄹ<br><br></p>
+        <figure>
+            <img src="images/img01.jpg" class="active" alt="" />
+            <img src="images/img02.jpg" alt="" />
+            <img src="images/img03.jpg" alt="" />
+        </figure>
+
+        <div class="indicator">
+            <button onclick="change_img(this.innerText)">1</button>
+            <button onclick="change_img(this.innerHTML)">2</button>
+            <button onclick="change_img(this.innerHTML)">3</button>
+        </div>
+        <div class="btn-close" onclick="lightbox_close()">X</div>
+    </div> <!-- end lightbox -->
+
+    <script src="main.js"></script>
+</body>
+</html>
