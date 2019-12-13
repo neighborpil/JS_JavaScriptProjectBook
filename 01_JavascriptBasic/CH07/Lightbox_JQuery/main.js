@@ -2,7 +2,7 @@ $(function(){
 
     // 변수 초기화
     var $indicator = $('.indicator button');
-    var $lightbox = $('#llightbox');
+    var $lightbox = $('#lightbox');
     var $block = $('#block');
 
     // 라이트 박스 표시
@@ -30,5 +30,20 @@ $(function(){
         $imgs.eq(val).attr('class', 'active');
     }
 
-    
+    // 이미지 목록 click이벤트 | 라이트박스 열기
+    $('img.thumb').click(function(){
+        var img_num = $(this).index() - 1;
+        lightbox_open(img_num);
+    });
+
+    // 라이트 박스 닫기 click 이벤트
+    $('.btn-close').click(function(){
+        lightbox_close();
+    });
+
+    // 인디케이터 클릭시 click 이벤트 | 라이트 박스 이미지 전환
+    $indicator.click(function(){
+        var img_num = $(this).index();
+        change_img(img_num);
+    });
 }); // end$()
