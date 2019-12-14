@@ -19,3 +19,10 @@ th, td{
 th:first-child, td:first-child{
     color: red;
 }
+
+#prev, #next{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
