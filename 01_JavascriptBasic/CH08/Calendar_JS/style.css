@@ -1,0 +1,21 @@
+#calendar_wrap{
+    background: #333;
+    width: 350px;
+}
+caption{
+    font-size: 1.5em;
+    color: orange;
+    padding: 10px;;
+}
+table, th, td{
+    color: white;
+    border: 1px solid #666;
+    border-collapse: collapse;
+}
+th, td{
+    width: 30px;
+    padding: 10px;
+}
+th:first-child, td:first-child{
+    color: red;
+}

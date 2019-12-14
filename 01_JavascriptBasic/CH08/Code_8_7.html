@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+// 날짜 변수 2019년 12월
+var new_year = 2019, new_month = 12;
+// 특정 연월을 시작일로부터 조회(year, month, date)
+d = new Date(new_year, new_month, 1);
+// 월별 일수 구하기
+d_length = 32 - new Date(new_year, new_month, 32).getDate(); // ??????
+
+document.write("d_length: " + d_length);
+
+    </script>
+</body>
+
+</html>
