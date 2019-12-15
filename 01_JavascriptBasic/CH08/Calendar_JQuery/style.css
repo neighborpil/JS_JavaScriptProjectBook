@@ -5,7 +5,7 @@
 caption{
     font-size: 1.5em;
     color: orange;
-    padding: 10px;;
+    padding: 10px;
 }
 table, th, td{
     color: white;
@@ -15,16 +15,10 @@ table, th, td{
 th, td{
     width: 30px;
     padding: 10px;
-    text-align: center;
 }
 th:first-child, td:first-child{
     color: red;
 }
-
-.search{
-    text-align: center;
-}
-
 #prev, #next{
     display: inline-block;
     text-decoration: none;
