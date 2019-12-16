@@ -12,14 +12,21 @@ var yDeg = 0, // 페이지 전환시 데스크톱 페이지를 회전시키는 �
     page_angle = 0;
 
 function init_page(){
-    w = page[0].offsetWidth;
+    w = page[0].offsetWidth; // 현제 페이지의 폭 값을 변수로 참조
 
     // 3D page 4면체 위치 정의
     for(var i=0; i<page.length; i++){
-        page[i].style.transform = 'rotateY('+ page_angle + 'deg) translateZ(' + (w/2) + 'px)';
+        page[i].style.transform = 'rotateY('+ page_angle + 'deg) translateZ(' + (w/2) + 'px)'; // 90도씩 회전, 화면의 절반만큼 z축 앞으로 표시
         page_angle += 90;
     }
 
-    // page wrapper 정면으로 초기화
+    // page wrapper 정면으로 초기화, 페이지를 회전시키는 회전체는 .wrapper
+    // z축 앞으로 빼놨기 때문에 다시 뒤로 넣어줌(translateZ: 양수면 가까워지고, 음수면 멀어진다)
     wrapper.style.transform = 'translateZ(' + (-w/2) + 'px) rotateY(' + yDeg + 'deg)';
+}
+
+// 인디케이터 초기화
+function init_indicator(){
+    // 인디케이터 표시
+    for(var)
 }
