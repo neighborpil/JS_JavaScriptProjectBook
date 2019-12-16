@@ -108,7 +108,7 @@ header h1{
     cursor: pointer;
 }
 
-#indicattor li.active{
+#indicator li.active{
     background-color: rgba(50%, 50%, 50%, 0.5);
     color: white;
 }
