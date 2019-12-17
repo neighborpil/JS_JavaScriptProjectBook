@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header {
+            background: orange;
+            width: 300px;
+            height: 60px;
+        }
+
+        header>h1 {
+            float: left;
+            margin: 10px 0 0 20px;
+        }
+
+        header>a {
+            float: right;
+            margin: 20px 20px 0 0;
+            background-color: #666;
+            color: white;
+        }
+
+        #gnb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        #gnb a:hover {
+            text-decoration: underline;
+        }
+
+        nav{
+            overflow: hidden;
+            width: 300px;
+            height: 0;
+        }
+
+        nav.active{
+            height: 300px;
+        }
+
+        nav a.active {
+            background-color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="app_title">app title</h1>
+        <a href="#" id="toggle">toggle</a>
+    </header>
+    <nav id="gnb" .>
+        <div><a href="#">Home</a></div>
+        <div><a href="#">Portfolio</a></div>
+        <div><a href="#">Contact</a></div>
+    </nav>
+
+    <script>
+        var nav = document.getElementById('gnb');
+        var list = nav.getElementsByTagName('a');
+        var appTitle = document.getElementById('app_title');
+        var toogle = document.getElementById('toggle');
+
+        function init() {
+            nav.setAttribute('class', 'active');
+            list[0].setAttribute('class', 'active');
+        };
+
+        // main
+        init();
+
+        // event
+        for (var i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function (e) {
+                for (var i = 0; i < list.length; i++) {
+                    list[i].removeAttribute('class');
+                }
+
+                e.target.setAttribute('class', 'active');
+                appTitle.innerHTML = e.target.innerHTML;
+            });
+        }
+
+        toggle.addEventListener('click', function(e){
+            var attr = nav.getAttribute('class');
+
+            if(attr == 'active'){
+                nav.removeAttribute('class');
+            } else{
+                nav.setAttribute('class', 'active');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
