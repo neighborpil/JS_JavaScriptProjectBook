@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>OpenWeatherMap</h1>
+
+    <script>
+        var url = "http://api.openweathermap.org/data/2.5/weather?q=busan&APPID=381a1e967e8b0e19832ffff597f8ca90";
+
+        $.getJSON(url, function(data){
+            // 날씨 data 객체
+            var sys = data.sys; // 국가명, 일출/일몰
+            var city = data.name; // 도시명
+            var weather = data.weather; // 날씨 객체
+            var main = data.main; // 온도, 기압 관련 객체
+
+            var wmain = weather[0].main; // 구름 상태(Cloudiness)
+            var w_id = weather[0].id; // 날씨 상태 id 코드
+            var icon = weather[0].icon; // 날씨 아이콘 정보
+            var country = sys.country; // 국가명
+            var temp = main.temp; // 현재 온도
+            var temp_min = main.temp_min; // 최저 온도
+            var temp_max = main.temp_max; // 최고 온도
+
+            // 날씨 정보 표시
+            $('body').append(wmain + ', ' + icon + ' ' +
+                             '현재 온도: ' + parseInt(temp - 273.15) + ' ' + // 켈빈 -> 섭씨
+                             '최저 온도: ' + parseInt(temp_min - 273.15) + ' ' +
+                             '최고 온도: ' + parseInt(temp_max - 273.15) + ' ' +
+                             country + ' ' + city + ' ' + w_id + ' ' + '<br>');
+            // 날씨 아이콘 표시
+            var icon_url = 'http://openweathermap.org/img/w/' + icon;
+            $('body').append("<img src = '" + icon_url + ".png'>");
+        });
+    </script>
+</body>
+</html>
