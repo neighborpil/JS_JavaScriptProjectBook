@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    font-weight: normal;
+}
+p{
+    margin-bottom: 10px;
+}
+body{
+    color: #333;
+    font-size: 100%;
+    font-family: sans-serif;
+}
+#weather_info{
+    position: relative;
+    width: 100%;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    padding: 10px;
+    background: #eee;
+    background: url("cloud.jpg") no-repeat;
+}
