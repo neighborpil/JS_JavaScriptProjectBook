@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+
+        // 익명함수 사용
+        for(var i=0; i< 3; i++){
+            (function(x){
+                arr[x] = function(){
+                    return x;
+                }
+            })(i);
+        }
+
+        document.write(arr[0]() + '<br>'); // 0
+        document.write(arr[1]() + '<br>'); // 1
+        document.write(arr[2]() + '<br>'); // 2
+    </script>
+</body>
+</html>

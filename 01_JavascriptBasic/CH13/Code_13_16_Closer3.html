@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outFunc(){
+            var staticValue = 0; // 지역 변수지면 정적 변수로 사용
+
+            // 내부함수(클로저)
+            function inFunc(val){
+                var a = val || 1; // 매개변수 a에 val을 대입(a에 값이 없으면 1 대입)
+                return staticValue += a; // 정적 변수값 리턴
+            }
+
+            return inFunc; // 함수를 리턴
+        }
+    
+        var c = outFunc(); // 클로저 함수를 리턴받음
+        document.write(c() + '<br>'); // 1
+        document.write(c() + '<br>'); // 2
+        document.write(c() + '<br>'); // 3
+
+        // 클로저 함수를 리턴받아 새로운 변수에 대입하면, outFunc()가 종료된 이후에도 해당 함수의
+        // 내부 변수값을 계속 참조하여 살아있게 된다. 따라서 정적 변수와 차이가 없다
+        // 프로그램이 실행되는 동안 메모리에 계속 상주하므로 메모리적 측면에서는 전역변수와 다를게 없다 
+        // 하지만 전역변수는 외부에서 변경이 가능하지만, 클로저를 이용한 정적 변수는 외부에서 변경이 불가능하다
+    
+    </script>
+</body>
+</html>

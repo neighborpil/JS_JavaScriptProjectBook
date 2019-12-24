@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+
+        // let으로 변수를 선언할 경우 변수의 스코프가 블록단위로 엄격해지므로, 이런 문제 발생
+        for(let i=0; i<3; i++){
+            let x = i; 
+            arr[x] = function(){
+                return x;
+            }
+        }
+
+        document.write(arr[0]() + '<br>'); // 0
+        document.write(arr[1]() + '<br>'); // 1
+        document.write(arr[2]() + '<br>'); // 2
+    
+    </script>
+</body>
+</html>

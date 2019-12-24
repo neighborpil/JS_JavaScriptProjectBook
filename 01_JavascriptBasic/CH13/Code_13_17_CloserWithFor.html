@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [];
+
+        // 클로저가 arr[]에 지정한 함수가 되었기 때문에, 각각의 클로저가 하나의 환경을 공유하여 3만 출력
+        for(var i=0; i<3; i++){
+            arr[i] = function(){ 
+                return i;
+            }
+            console.log(arr[i]());
+        }
+
+        // for문 종료 후 배열 함수 실행
+        document.write(arr[0]() + '<br>');
+        document.write(arr[1]() + '<br>');
+        document.write(arr[2]() + '<br>');
+
+    </script>
+</body>
+</html>
