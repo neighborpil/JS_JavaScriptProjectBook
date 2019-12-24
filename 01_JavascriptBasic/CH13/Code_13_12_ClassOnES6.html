@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 클래스 선언(ES6)
+        class Character{
+            constructor(name, job){
+                this.name = name;
+                this.job = job;
+            }
+
+            move(){
+                document.write(this.name + ' ' + this.job + ' 캐릭터 이동<br>');
+            }
+        };
+
+        // 인스턴스 객체 생성
+        let char1 = new Character('루이스', '기사');
+        
+        // 실행
+        char1.move();
+    </script>
+</body>
+</html>

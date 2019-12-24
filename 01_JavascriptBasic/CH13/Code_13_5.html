@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 객체 정의
+        var character = {
+            name: '루이스',
+            job: '기사',
+            move: function(){
+                document.write(this.name + ' ' + this.job + ' 캐릭터 이동<br>');
+            },
+            stop: function(){
+                document.write(this.name + ' ' + this.job + ' 캐릭터 정지<br>');
+            }
+        }
+
+        // 메서드 실행
+        character.move();
+        character.stop();
+    </script>
+
+</body>
+
+</html>

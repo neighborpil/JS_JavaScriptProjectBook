@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var globalValue = 20;
+
+        function testFunc() {
+            var localValue = 10;
+            document.write('globalValue = ' + globalValue + '<br>');
+            document.write('localValue = ' + localValue + '<br>');
+        }
+
+        document.write('globalValue = ' + globalValue + '<br>');
+        document.write('localValue = ' + localValue + '<br>');
+
+        // 자바스크립트에서는 static이라든지 상수가 없기 때문에 로컬 변수를 전달 할 수 없다
+        // 따라서 클로저라는 기법을 활용하여 전달한다
+    </script>
+</body>
+
+</html>

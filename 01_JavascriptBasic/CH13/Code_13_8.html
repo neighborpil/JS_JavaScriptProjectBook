@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 프로토타입으로 메서드 생성: 속성은 인스턴스마다 생성, 메서드는 공통으로
+
+        function Character(name, job){
+            this.name = name;
+            this.job = job;
+        }
+
+        // 프로토타입 메서드 생성
+        Character.prototype.move = function(){
+            document.write(this.name + ' ' + this.job + ' ' + '캐릭터 이동<br>');
+        };
+
+        // 새로운 객체 인스턴스 생성
+        var char1 = new Character('루이스', '기사');
+        var char2 = new Character('플레네', '마법사');
+
+        // 실행
+        char1.move();
+        char2.move();
+
+    </script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ body{
     box-sizing: border-box;
     padding: 10px;
     background: #eee;
-    background: url("") no-repeat; /* todo: change image */
+    background: #3c8ed2;
     background-size: cover;
     color: white;
 }
@@ -53,4 +53,20 @@ section > figure > img{
 
 section > .temp{
     font-size: 3.4em;
+}
+
+aside{
+    overflow: hidden;
+}
+aside>p{
+    font-size: 1.8em;
+    text-align: right;
+}
+
+/* 로딩용 이미지 */
+#weather_info .load_img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
 }

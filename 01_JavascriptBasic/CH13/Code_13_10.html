@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 객체 리터럴 타입으로 프로토타입 메서드 정의
+        function Character(name, job) {
+            this.name = name;
+            this.job = job;
+        };
+
+        Character.prototype = {
+            move: function () {
+                document.write(this.name + ' ' + this.job + ' ' + '캐릭터 이동<br>');
+            },
+            attack: function () {
+                document.write(this.name + ' ' + this.job + ' ' + '캐릭터 공격<br>');
+            },
+            escape: function () {
+                document.write(this.name + ' ' + this.job + ' ' + '캐릭터 도망<br>');
+            },
+            dead: function () {
+                document.write(this.name + ' ' + this.job + ' ' + '캐릭터 사망<br>');
+            }
+        }
+
+
+        var char = new Character('마마마', '기사');
+
+        char.move();
+        char.attack();
+        char.escape();
+        char.dead();
+    </script>
+</body>
+
+</html>
