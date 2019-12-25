@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="txt" id="txt" cols="30" rows="10"></textarea><br>
+    <label for="textcolor">Change text color</label>
+    <input type="color" id="textcolor" /><br>
+    <label for="bgcolor">Change bg color</label>
+    <input type="color" id="bgcolor" /><br>
+
+    <button id="set_color">Set color</button>
+    <button id="get_color">Get color</button>
+
+    <script>
+        // 글상자에 글자를 입력
+        $('#txt').val('글상자 영역의 색상값을 저장합니다');
+
+        // 글자색 변경시 글상자의 글자색에 적용
+        $('#textcolor').change(function(){
+            var color = $(this).val();
+            $('#txt').css('color', color);
+        });
+
+        // 배경색 변경시 글상자의 배경색에 적용
+        $('#bgcolor').change(function(){
+            var color = $(this).val();
+            $('#txt').css('background-color', color);
+        });
+
+        // 글자색과 배경색을 로컬 스토리지에 저장
+        $('#set_color').click(function(){
+            var textcolor = $('#textcolor').val();
+            var bgcolor = $('#bgcolor').val();
+
+            localStorage.setItem("textcolor", textcolor);
+            localStorage.setItem("bgcolor", bgcolor);
+        });
+
+        // 저장한 환경 설정을 읽어옴
+        $('#get_color').click(function(){
+            var textcolor = localStorage.getItem("textcolor");
+            var bgcolor = localStorage.getItem("bgcolor");
+
+            $("#txt").css({
+                "color": textcolor,
+                "background-color": bgcolor
+            });
+        });
+    
+    </script>
+</body>
+</html>
