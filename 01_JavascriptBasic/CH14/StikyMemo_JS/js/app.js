@@ -19,9 +19,27 @@ $(function(){
         // 메모 추가 메서드
         add: function(){
             // 창 크기를 구함
-            var win_width = 
+            var win_width = $('#sticky_wrap').width() - 250,
+                win_height = $('#sticky_wrap').height() - 300,
+                x = Math.random() * win_width,
+                y = Math.random() * win_height;
+
+            $('#sticky_wrap').append(sticky_html);
+            var $new_sticky = $('.sticky').last();
+
+            $new_sticky.css({
+                left: parseInt(x) + 'px',
+                top: y
+            });
+            $('.sticky').css('zIndex', '0');
+            $new_sticky.css('zIndex', '99');
         }
     }
+
+    // 추가 버튼
+    $('#sticky_wrap').on('click', '.add', function(){
+        Sticky.add();
+    });
 
 
     // 메모장 초기화
